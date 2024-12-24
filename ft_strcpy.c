@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mroman <mroman-j@student.42barcel>               +#+  +:+       +#+        */
+/*   By: mroman-j <mroman-j@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/24 10:00:00 by mroman            #+#    #+#             */
-/*   Updated: 2024/12/24 10:00:00 by mroman           ###   ########.fr       */
+/*   Created: 2024/12/27 13:42:11 by mroman-j          #+#    #+#             */
+/*   Updated: 2024/12/02 10:27:52 by mroman-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <libc.h>
 
-size_t	ft_strlen(const char *s)
+char	*ft_strcpy(char *dest, char *src)
 {
-    size_t	len;
+	int	p;
 
-    len = 0;
-    while (s[len])
-        len++;
-    return (len);
+	p = 0;
+	while (src[p] != '\0')
+	{
+		dest[p] = src[p];
+		p++;
+	}
+	dest[p] = '\0';
+	return (dest);
 }
 
 /*
-int main(void)
+int	main(void)
+
 {
-    char *str = "Hello, World!";
-    printf("Length of string \"%s\" is %zu\n", str, ft_strlen(str));
-    return (0);
-}
-*/
+	write(1, ft_strcpy("world", "Hello"), 6);
+	return (0);	
+}*/

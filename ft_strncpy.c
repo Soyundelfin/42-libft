@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mroman <mroman-j@student.42barcel>               +#+  +:+       +#+        */
+/*   By: mroman-j <mroman-j@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/24 10:00:00 by mroman            #+#    #+#             */
-/*   Updated: 2024/12/24 10:00:00 by mroman           ###   ########.fr       */
+/*   Created: 2024/12/27 20:09:45 by mroman-j          #+#    #+#             */
+/*   Updated: 2024/12/02 10:30:26 by mroman-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <libc.h>
 
-size_t	ft_strlen(const char *s)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-    size_t	len;
+	unsigned int	p;
 
-    len = 0;
-    while (s[len])
-        len++;
-    return (len);
+	p = 0;
+	while (src[p] != '\0' && p < n)
+	{
+		dest[p] = src[p];
+		p++;
+	}
+	while (p < n)
+	{
+		dest[p] = '\0';
+		p++;
+	}
+	return (dest);
 }
-
-/*
-int main(void)
-{
-    char *str = "Hello, World!";
-    printf("Length of string \"%s\" is %zu\n", str, ft_strlen(str));
-    return (0);
-}
-*/
