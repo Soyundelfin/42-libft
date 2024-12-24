@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mroman-j <mroman-j@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,28 +12,28 @@
 
 #include "libft.h"
 
-int isascii(int c) 
+int isprint(int c) 
 {
-    return (c >= 0 && c <= 127);
+    return (c >= 32 && c <= 126);
 }
 
 /*
-int main()
+int main 
 {
-	char c, result;
+    char c, result;
 
-	c = '7';
-	result = ft_isascii(c);
-	printf("The result is %d\n", result);
+    c = '7';
+    result = ft_isprint(c);
+    printf("The result is %d\n", result);
 
-	c = 'g';
-	result = ft_isascii(c);
-	printf("The result is %d\n", result);
+    c = 'g';
+    result = ft_isprint(c);
+    printf("The result is %d\n", result);
 
-	c = '+';
-	result = ft_isascii(c);
-	printf("The result is %d\n", result);
+    c = '+';
+    result = ft_isprint(c);
+    printf("The result is %d\n", result);
 
-	return 0;
+    return 0;
 }
 */
