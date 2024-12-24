@@ -9,7 +9,7 @@
 /*   Updated: 2024/12/24 17:31:48 by mroman-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include <libc.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

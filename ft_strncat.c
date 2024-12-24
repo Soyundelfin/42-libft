@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mroman-j <mroman-j@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 11:39:56 by mroman-j          #+#    #+#             */
 /*   Updated: 2024/12/24 20:01:06 by mroman-j         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
-#include "libft.h"
+/* ************************************************************************** */
+#include <libc.h>
 
-int isprint(int c) 
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-    return (c >= 32 && c <= 126);
+	unsigned int	p1;
+	unsigned int	p2;
+
+	p1 = 0;
+	p2 = 0;
+	while (dest[p1] != '\0')
+		p1++;
+	while (src[p2] != '\0' && nb > 0)
+	{
+		dest[p1] = src[p2];
+		p1++;
+		p2++;
+		nb--;
+	}
+	dest[p1] = '\0';
+	return (dest);
 }
 
 /*
-int main 
+int main() 
 {
-    char c, result;
+  char str1[] = "Hola";
+  char str2[] = " mundo";
 
-    c = '7';
-    result = ft_isprint(c);
-    printf("The result is %d\n", result);
+  strncat(str1, str2, 2);
 
-    c = 'g';
-    result = ft_isprint(c);
-    printf("The result is %d\n", result);
+  printf("%s\n", str1);
 
-    c = '+';
-    result = ft_isprint(c);
-    printf("The result is %d\n", result);
-
-    return 0;
-}
-*/
+  return 0;
+}*/
